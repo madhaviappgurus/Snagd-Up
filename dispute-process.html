@@ -6,48 +6,158 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dispute Process – Snagd Up</title>
   <style>
+    :root {
+      --text: #1a1a1a;
+      --muted: #555;
+      --line: #c9c9c9;
+      --head: #f0f0f0;
+      --bg: #fff;
+      --num: 3.4rem;
+      --mk: 3.2rem
+    }
 
-    :root{--text:#1a1a1a;--muted:#555;--line:#c9c9c9;--head:#f0f0f0;--bg:#fff;--num:3.4rem;--mk:3.2rem}
-    *{box-sizing:border-box}
-    html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-    a.xref{color:#0b57d0;text-decoration:underline}
-    a.xref:hover{text-decoration:none}
-    [id]{scroll-margin-top:20px}
-    :target{background:#fff4c2;transition:background .3s}
-    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 "Helvetica Neue",Arial,sans-serif}
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth
+    }
+
+    a.xref {
+      color: #0b57d0;
+      text-decoration: underline
+    }
+
+    a.xref:hover {
+      text-decoration: none
+    }
+
+    [id] {
+      scroll-margin-top: 20px
+    }
+
+    :target {
+      background: #fff4c2;
+      transition: background .3s
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.55 "Helvetica Neue", Arial, sans-serif
+    }
+
     .container {
-            width: 100%;
-            max-width: 1440px;
-            margin: 0 auto;
-            padding: 50px 80px;
-        }
-    h1{font-size:2rem;line-height:1.2;margin:0 0 .75rem;text-align:left}
-    .company{text-align:left;margin:0 0 2.5rem}
-    .company p{margin:.15rem 0}
-    .sec{display:grid;grid-template-columns:var(--num) 1fr;font-size:1.3rem;line-height:1.3;margin:2.2rem 0 1rem;font-weight:700}
-    .sub{display:grid;grid-template-columns:var(--num) 1fr;font-size:1.05rem;margin:1.4rem 0 .6rem;font-weight:700}
-    p{margin:0 0 .9rem}
-    p.ind1{margin-left:var(--num)}
-    .row{display:grid;grid-template-columns:var(--mk) 1fr;margin:0 0 .75rem}
-    .row.l1{margin-left:var(--num)}
-    .row.l2{margin-left:calc(var(--num) + var(--mk))}
-    .row.cl{grid-template-columns:var(--num) 1fr}
-    .row.bullet{grid-template-columns:1.6rem 1fr}
-    .row>div{min-width:0;overflow-wrap:anywhere}
-    .mk{white-space:nowrap}
-    @media (max-width:820px){
-      :root{--num:2.6rem;--mk:2.6rem}
+      width: 100%;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 50px 80px;
+    }
+
+    h1 {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin: 0 0 .75rem;
+      text-align: left
+    }
+
+    .company {
+      text-align: left;
+      margin: 0 0 2.5rem
+    }
+
+    .company p {
+      margin: .15rem 0
+    }
+
+    .sec {
+      display: grid;
+      grid-template-columns: var(--num) 1fr;
+      font-size: 1.3rem;
+      line-height: 1.3;
+      margin: 2.2rem 0 1rem;
+      font-weight: 700
+    }
+
+    .sub {
+      display: grid;
+      grid-template-columns: var(--num) 1fr;
+      font-size: 1.05rem;
+      margin: 1.4rem 0 .6rem;
+      font-weight: 700
+    }
+
+    p {
+      margin: 0 0 .9rem
+    }
+
+    p.ind1 {
+      margin-left: var(--num)
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: var(--mk) 1fr;
+      margin: 0 0 .75rem
+    }
+
+    .row.l1 {
+      margin-left: var(--num)
+    }
+
+    .row.l2 {
+      margin-left: calc(var(--num) + var(--mk))
+    }
+
+    .row.cl {
+      grid-template-columns: var(--num) 1fr
+    }
+
+    .row.bullet {
+      grid-template-columns: 1.6rem 1fr
+    }
+
+    .row>div {
+      min-width: 0;
+      overflow-wrap: anywhere
+    }
+
+    .mk {
+      white-space: nowrap
+    }
+
+    @media (max-width:820px) {
+      :root {
+        --num: 2.6rem;
+        --mk: 2.6rem
+      }
+
       .container {
-                padding: 30px 16px 30px;
-            }
-      h1{font-size:1.6rem}
-      .sec{font-size:1.25rem}
+        padding: 30px 16px 30px;
+      }
+
+      h1 {
+        font-size: 1.6rem
+      }
+
+      .sec {
+        font-size: 1.25rem
+      }
     }
-    @media (max-width:480px){
-      :root{--num:2.3rem;--mk:2.3rem}
-      body{font-size:15px}
+
+    @media (max-width:480px) {
+      :root {
+        --num: 2.3rem;
+        --mk: 2.3rem
+      }
+
+      body {
+        font-size: 15px
+      }
     }
-    
   </style>
 </head>
 
@@ -58,21 +168,28 @@
       <!-- <p>Snagd Up Pty Ltd ACN 703 095 701</p> -->
       <p><strong>Last updated</strong>: 19th November 2026</p>
     </div>
-        <h2 class="sec" id="s1"><span class="num">1</span><span>About this Dispute Process</span></h2>
+    <h2 class="sec" id="s1"><span class="num">1</span><span>About this Dispute Process</span></h2>
     <div class="row cl" id="s1-1"><span class="mk">1.1</span>
-      <div>The purpose of this Dispute Process is to set out how a Buyer may lodge a dispute about a Product purchased through the APP, and how we decide whether the funds held by the Payment Processor for that sale are released to the Seller or returned to the Buyer.</div>
+      <div>The purpose of this Dispute Process is to set out how a Buyer may lodge a dispute about a Product purchased
+        through the APP, and how we decide whether the funds held by the Payment Processor for that sale are released to
+        the Seller or returned to the Buyer.</div>
     </div>
     <div class="row cl" id="s1-2"><span class="mk">1.2</span>
-      <div>Capitalised words have the meaning given in the Snagd Up User Licence Agreement (<strong>Licence</strong>). If there is any inconsistency between this Dispute Process and the Licence, the Licence prevails.</div>
+      <div>Capitalised words have the meaning given in the Snagd Up User Licence Agreement (<strong>Licence</strong>).
+        If there is any inconsistency between this Dispute Process and the Licence, the Licence prevails.</div>
     </div>
     <div class="row cl" id="s1-3"><span class="mk">1.3</span>
-      <div>We are not a party to any agreement between a Buyer and a Seller. Our role in a dispute is limited to deciding whether the funds held by the Payment Processor are released to the Seller or returned to the Buyer, in whole or in part.</div>
+      <div>We are not a party to any agreement between a Buyer and a Seller. Our role in a dispute is limited to
+        deciding whether the funds held by the Payment Processor are released to the Seller or returned to the Buyer, in
+        whole or in part.</div>
     </div>
     <div class="row cl" id="s1-4"><span class="mk">1.4</span>
       <div>We make each decision acting reasonably, against the criteria set out in this Dispute Process.</div>
     </div>
     <div class="row cl" id="s1-5"><span class="mk">1.5</span>
-      <div>A decision we make under this Dispute Process does not determine the legal rights of a Buyer or a Seller against each other, and does not prevent either of them from pursuing those rights directly against the other as set out in the Licence.</div>
+      <div>A decision we make under this Dispute Process does not determine the legal rights of a Buyer or a Seller
+        against each other, and does not prevent either of them from pursuing those rights directly against the other as
+        set out in the Licence.</div>
     </div>
     <h2 class="sec" id="s2"><span class="num">2</span><span>What counts as a valid claim</span></h2>
     <div class="row cl" id="s2-1"><span class="mk">2.1</span>
@@ -82,13 +199,15 @@
       <div>a Product to be delivered by the Seller has not been received;</div>
     </div>
     <div class="row item l1"><span class="mk">(b)</span>
-      <div>the Product was lost or damaged before it was delivered to the Buyer’s nominated delivery address by a courier or postal service arranged by the Seller;</div>
+      <div>the Product was lost or damaged before it was delivered to the Buyer’s nominated delivery address by a
+        courier or postal service arranged by the Seller;</div>
     </div>
     <div class="row item l1"><span class="mk">(c)</span>
       <div>the Product is faulty, damaged or missing parts, and this was not disclosed in the Product listing;</div>
     </div>
     <div class="row item l1"><span class="mk">(d)</span>
-      <div>the Product does not correspond in all material respects with the description and photographs in the Product listing, including its stated condition, quantity or dimensions; or</div>
+      <div>the Product does not correspond in all material respects with the description and photographs in the Product
+        listing, including its stated condition, quantity or dimensions; or</div>
     </div>
     <div class="row item l1"><span class="mk">(e)</span>
       <div>the Product is one that the Licence prohibits from being listed or sold through the APP.</div>
@@ -103,10 +222,13 @@
       <div>a defect, damage or missing part that was disclosed in the Product listing;</div>
     </div>
     <div class="row item l1"><span class="mk">(c)</span>
-      <div>loss of or damage to the Product after it is collected by the Buyer or delivered to the Buyer’s nominated delivery address;</div>
+      <div>loss of or damage to the Product after it is collected by the Buyer or delivered to the Buyer’s nominated
+        delivery address;</div>
     </div>
     <div class="row item l1"><span class="mk">(d)</span>
-      <div>for a Product that is collected, any issue raised after the Buyer has provided the OTP to the Seller, as providing the OTP confirms that the Buyer accepts the condition of the Product and agrees to the funds being released to the Seller; and</div>
+      <div>for a Product that is collected, any issue raised after the Buyer has provided the OTP to the Seller, as
+        providing the OTP confirms that the Buyer accepts the condition of the Product and agrees to the funds being
+        released to the Seller; and</div>
     </div>
     <div class="row item l1"><span class="mk">(e)</span>
       <div>any dispute lodged after the funds have been released to the Seller.</div>
@@ -118,14 +240,20 @@
     <div class="row item l1"><span class="mk">(a)</span>
       <div>for a Product that is collected, by not providing the OTP to the Seller at handover; and</div>
     </div>
-    <div class="row item l1"><span class="mk">(b)</span>
-      <div>for a Product that is delivered, before the Buyer confirms receipt through the APP and within 3 Business Days after delivery of the Product is shown by the carrier’s tracking information or the Seller’s proof of delivery.</div>
+    <div class="row item l1" id="s3-1(b)"><span class="mk">(b)</span>
+      <div>for a Product that is delivered, before the Buyer confirms receipt through the APP and within 3 Business Days
+        after delivery of the Product is shown by the carrier’s tracking information or the Seller’s proof of delivery.
+      </div>
     </div>
     <div class="row cl" id="s3-2"><span class="mk">3.2</span>
-      <div>If tracking information or proof of delivery shows a Product as delivered but the Buyer has not received it, the Buyer must lodge the dispute within the time required under clause <a class="xref" href="#s3-1">3.1(b)</a>.</div>
+      <div>If tracking information or proof of delivery shows a Product as delivered but the Buyer has not received it,
+        the Buyer must lodge the dispute within the time required under clause <a class="xref"
+          href="#s3-1(b)">3.1(b)</a>.</div>
     </div>
     <div class="row cl" id="s3-3"><span class="mk">3.3</span>
-      <div>If delivery of a Product is not shown by the carrier’s tracking information or the Seller’s proof of delivery within 10 Business Days after Payment Confirmation, the Buyer may lodge a dispute on the basis that the Product has not been received.</div>
+      <div>If delivery of a Product is not shown by the carrier’s tracking information or the Seller’s proof of delivery
+        within 10 Business Days after Payment Confirmation, the Buyer may lodge a dispute on the basis that the Product
+        has not been received.</div>
     </div>
     <div class="row cl" id="s3-4"><span class="mk">3.4</span>
       <div>If a Buyer does not lodge a dispute in time, the funds are released to the Seller under the Licence.</div>
@@ -138,16 +266,20 @@
       <div>a short description of the problem;</div>
     </div>
     <div class="row item l1"><span class="mk">(b)</span>
-      <div>photographs of the Product as received, clearly showing the problem and, for a Product that is delivered, the packaging and delivery label; and</div>
+      <div>photographs of the Product as received, clearly showing the problem and, for a Product that is delivered, the
+        packaging and delivery label; and</div>
     </div>
     <div class="row item l1"><span class="mk">(c)</span>
       <div>for a Product that has not been received, any tracking information the Buyer has.</div>
     </div>
     <div class="row cl" id="s4-2"><span class="mk">4.2</span>
-      <div>We will also consider the Product listing and any messages exchanged between the Buyer and the Seller that are provided to us by email. For example, we may compare the Buyer’s photographs with the listing photographs and the condition stated in the Product listing.</div>
+      <div>We will also consider the Product listing and any messages exchanged between the Buyer and the Seller that
+        are provided to us by email. For example, we may compare the Buyer’s photographs with the listing photographs
+        and the condition stated in the Product listing.</div>
     </div>
     <div class="row cl" id="s4-3"><span class="mk">4.3</span>
-      <div>We will give each of the Buyer and the Seller the information the other provides where (in our view) it is reasonably necessary to allow them to respond or to resolve the dispute.</div>
+      <div>We will give each of the Buyer and the Seller the information the other provides where (in our view) it is
+        reasonably necessary to allow them to respond or to resolve the dispute.</div>
     </div>
     <h2 class="sec" id="s5"><span class="num">5</span><span>Seller response</span></h2>
     <div class="row cl" id="s5-1"><span class="mk">5.1</span>
@@ -166,18 +298,24 @@
       <div>offering the Buyer a full refund on return of the Product; or</div>
     </div>
     <div class="row item l1"><span class="mk">(d)</span>
-      <div>disputing the claim and providing their own evidence, such as photographs taken before dispatch or handover, and proof of postage or delivery.</div>
+      <div>disputing the claim and providing their own evidence, such as photographs taken before dispatch or handover,
+        and proof of postage or delivery.</div>
     </div>
     <h2 class="sec" id="s6"><span class="num">6</span><span>Buyer response</span></h2>
     <div class="row cl" id="s6-1"><span class="mk">6.1</span>
-      <div>We will give the Seller’s response to the Buyer by email. The Buyer may reply to the Seller’s response and accept or reject any offer made by the Seller, by email within 3 Business Days after we give the Buyer the Seller’s response. An offer that the Buyer does not accept within that time lapses.</div>
+      <div>We will give the Seller’s response to the Buyer by email. The Buyer may reply to the Seller’s response and
+        accept or reject any offer made by the Seller, by email within 3 Business Days after we give the Buyer the
+        Seller’s response. An offer that the Buyer does not accept within that time lapses.</div>
     </div>
     <h2 class="sec" id="s7"><span class="num">7</span><span>Further information and agreed outcomes</span></h2>
     <div class="row cl" id="s7-1"><span class="mk">7.1</span>
-      <div>We may ask either party for further information, which must be provided within 2 Business Days. If a Buyer or Seller does not respond within the time required for any step in this Dispute Process, we will decide the dispute on the information we have.</div>
+      <div>We may ask either party for further information, which must be provided within 2 Business Days. If a Buyer or
+        Seller does not respond within the time required for any step in this Dispute Process, we will decide the
+        dispute on the information we have.</div>
     </div>
     <div class="row cl" id="s7-2"><span class="mk">7.2</span>
-      <div>If the Buyer and the Seller agree an outcome at any stage and each of them confirms it to us by email, we will decide the dispute in accordance with that agreement.</div>
+      <div>If the Buyer and the Seller agree an outcome at any stage and each of them confirms it to us by email, we
+        will decide the dispute in accordance with that agreement.</div>
     </div>
     <h2 class="sec" id="s8"><span class="num">8</span><span>Outcome, returns and refunds</span></h2>
     <div class="row cl" id="s8-1"><span class="mk">8.1</span>
@@ -196,55 +334,88 @@
       <div>In deciding a dispute:</div>
     </div>
     <div class="row item l1"><span class="mk">(a)</span>
-      <div>we consider the Product listing, any messages between the Buyer and the Seller provided to us by email and the information the Buyer and the Seller provide under this Dispute Process;</div>
+      <div>we consider the Product listing, any messages between the Buyer and the Seller provided to us by email and
+        the information the Buyer and the Seller provide under this Dispute Process;</div>
     </div>
     <div class="row item l1"><span class="mk">(b)</span>
-      <div>we return funds to the Buyer only if we are satisfied that it is more likely than not that the Buyer has a valid claim under clause <a class="xref" href="#s2-1">2.1</a>;</div>
+      <div>we return funds to the Buyer only if we are satisfied that it is more likely than not that the Buyer has a
+        valid claim under clause <a class="xref" href="#s2-1">2.1</a>;</div>
     </div>
     <div class="row item l1"><span class="mk">(c)</span>
-      <div>for a claim that a Product has not been received, we treat the Product as received only if the carrier’s tracking information or the Seller’s proof of delivery shows that it was delivered to the Buyer’s nominated delivery address; and</div>
+      <div>for a claim that a Product has not been received, we treat the Product as received only if the carrier’s
+        tracking information or the Seller’s proof of delivery shows that it was delivered to the Buyer’s nominated
+        delivery address; and</div>
     </div>
     <div class="row item l1"><span class="mk">(d)</span>
-      <div>we return only part of the funds to the Buyer where the Buyer and the Seller agree to that outcome, or where the claim is that the quantity of the Product is less than the quantity stated in the Product listing, in which case the part returned is in proportion to the shortfall.</div>
+      <div>we return only part of the funds to the Buyer where the Buyer and the Seller agree to that outcome, or where
+        the claim is that the quantity of the Product is less than the quantity stated in the Product listing, in which
+        case the part returned is in proportion to the shortfall.</div>
     </div>
     <div class="row cl" id="s8-3"><span class="mk">8.3</span>
-      <div>We will give both the Buyer and the Seller a short written outcome with reasons by email, within 5 Business Days after the last response or further information is due.</div>
+      <div>We will give both the Buyer and the Seller a short written outcome with reasons by email, within 5 Business
+        Days after the last response or further information is due.</div>
     </div>
     <div class="row cl" id="s8-4"><span class="mk">8.4</span>
-      <div>Where the Buyer is required to return the Product under the Licence, the Buyer must send the Product to the Seller within 5 Business Days after we give the Buyer the Seller’s return address by email, using a tracked service, and email the tracking number to us. The Product must be returned in the same condition in which it was received. If the Buyer does not send the Product within that time, or any longer time we allow on the Buyer’s reasonable request, the dispute will be closed and the funds released to the Seller. Where we decide that only part of the funds is to be returned to the Buyer, the Buyer keeps the Product, unless we decide otherwise. We will not require the Buyer to return a Product that the Licence prohibits from being listed or sold through the APP, or that cannot lawfully or safely be sent. The Seller is responsible for paying return postage. If the Seller does not do so, we may suspend the Seller’s access to the APP.</div>
+      <div>Where the Buyer is required to return the Product under the Licence, the Buyer must send the Product to the
+        Seller within 5 Business Days after we give the Buyer the Seller’s return address by email, using a tracked
+        service, and email the tracking number to us. The Product must be returned in the same condition in which it was
+        received. If the Buyer does not send the Product within that time, or any longer time we allow on the Buyer’s
+        reasonable request, the dispute will be closed and the funds released to the Seller. Where we decide that only
+        part of the funds is to be returned to the Buyer, the Buyer keeps the Product, unless we decide otherwise. We
+        will not require the Buyer to return a Product that the Licence prohibits from being listed or sold through the
+        APP, or that cannot lawfully or safely be sent. The Seller is responsible for paying return postage. If the
+        Seller does not do so, we may suspend the Seller’s access to the APP.</div>
     </div>
     <div class="row cl" id="s8-5"><span class="mk">8.5</span>
-      <div>The refund is released through the Payment Processor to the Buyer’s Payment Method once the Seller confirms receipt of the returned Product to us by email, or tracking information shows it has been delivered to the Seller. The Payment Processor and the Buyer’s bank may take several Business Days to process the refund.</div>
+      <div>The refund is released through the Payment Processor to the Buyer’s Payment Method once the Seller confirms
+        receipt of the returned Product to us by email, or tracking information shows it has been delivered to the
+        Seller. The Payment Processor and the Buyer’s bank may take several Business Days to process the refund.</div>
     </div>
     <div class="row cl" id="s8-6"><span class="mk">8.6</span>
-      <div>If the Buyer asks their card issuer or payment provider to reverse the payment for a Product while a dispute about that Product is open, we may close the dispute. The funds are then dealt with in accordance with the outcome of that request and the Licence.</div>
+      <div>If the Buyer asks their card issuer or payment provider to reverse the payment for a Product while a dispute
+        about that Product is open, we may close the dispute. The funds are then dealt with in accordance with the
+        outcome of that request and the Licence.</div>
     </div>
     <h2 class="sec" id="s9"><span class="num">9</span><span>Internal review</span></h2>
     <div class="row cl" id="s9-1"><span class="mk">9.1</span>
-      <div>If the Buyer or the Seller disagrees with our decision, they may request one internal review within 2 Business Days after receiving the outcome, by email to hello@snagdup.com.au or through the contact functionality in the APP. The request must explain why they disagree and include any new evidence.</div>
+      <div>If the Buyer or the Seller disagrees with our decision, they may request one internal review within 2
+        Business Days after receiving the outcome, by email to hello@snagdup.com.au or through the contact functionality
+        in the APP. The request must explain why they disagree and include any new evidence.</div>
     </div>
     <div class="row cl" id="s9-2"><span class="mk">9.2</span>
-      <div>Where practicable, the review will be conducted by a different member of our team from the person who made the original decision. We will give both the Buyer and the Seller the review outcome, with reasons, within 5 Business Days. Subject to clause <a class="xref" href="#s10">10</a>, we do not act on a decision, and the funds continue to be held, until the time to request an internal review has passed or, if a review is requested, the review is complete. The review outcome is final for the purposes of the APP.</div>
+      <div>Where practicable, the review will be conducted by a different member of our team from the person who made
+        the original decision. We will give both the Buyer and the Seller the review outcome, with reasons, within 5
+        Business Days. Subject to clause <a class="xref" href="#s10">10</a>, we do not act on a decision, and the funds
+        continue to be held, until the time to request an internal review has passed or, if a review is requested, the
+        review is complete. The review outcome is final for the purposes of the APP.</div>
     </div>
     <h2 class="sec" id="s10"><span class="num">10</span><span>Maximum holding period</span></h2>
     <div class="row cl" id="s10-1"><span class="mk">10.1</span>
-      <div>Funds for a sale cannot be held for more than 90 days after Payment Confirmation (<strong>Holding Limit</strong>).</div>
+      <div>Funds for a sale cannot be held for more than 90 days after Payment Confirmation (<strong>Holding
+          Limit</strong>).</div>
     </div>
     <div class="row cl" id="s10-2"><span class="mk">10.2</span>
-      <div>If a dispute is open 5 Business Days before the Holding Limit ends, we will notify the Buyer and the Seller by email and, before the Holding Limit ends:</div>
+      <div>If a dispute is open 5 Business Days before the Holding Limit ends, we will notify the Buyer and the Seller
+        by email and, before the Holding Limit ends:</div>
     </div>
     <div class="row item l1"><span class="mk">(a)</span>
-      <div>if we have made a decision under clause <a class="xref" href="#s8-1">8.1</a>, we will give effect to our most recent decision, except that where the Buyer is required to return the Product and has not sent it in accordance with clause <a class="xref" href="#s8-4">8.4</a>, the funds will be released to the Seller; and</div>
+      <div>if we have made a decision under clause <a class="xref" href="#s8-1">8.1</a>, we will give effect to our most
+        recent decision, except that where the Buyer is required to return the Product and has not sent it in accordance
+        with clause <a class="xref" href="#s8-4">8.4</a>, the funds will be released to the Seller; and</div>
     </div>
     <div class="row item l1"><span class="mk">(b)</span>
-      <div>if we have not made a decision, the funds will be returned to the Buyer where the Product has not been collected, or delivery of the Product is not shown by the carrier’s tracking information or the Seller’s proof of delivery, and will otherwise be released to the Seller.</div>
+      <div>if we have not made a decision, the funds will be returned to the Buyer where the Product has not been
+        collected, or delivery of the Product is not shown by the carrier’s tracking information or the Seller’s proof
+        of delivery, and will otherwise be released to the Seller.</div>
     </div>
     <div class="row cl" id="s10-3"><span class="mk">10.3</span>
-      <div>The dispute is closed when funds are returned or released under clause <a class="xref" href="#s10-2">10.2</a>.</div>
+      <div>The dispute is closed when funds are returned or released under clause <a class="xref"
+          href="#s10-2">10.2</a>.</div>
     </div>
     <h2 class="sec" id="s11"><span class="num">11</span><span>Contact</span></h2>
     <div class="row cl" id="s11-1"><span class="mk">11.1</span>
-      <div>You may contact us about a dispute by email to hello@snagdup.com.au or through the contact functionality in the APP.</div>
+      <div>You may contact us about a dispute by email to hello@snagdup.com.au or through the contact functionality in
+        the APP.</div>
     </div>
   </div>
 </body>
